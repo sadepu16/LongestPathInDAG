@@ -1,0 +1,28 @@
+Longest path in a directed Acyclic graph | Dynamic Programming
+
+Given a directed graph G with N vertices and M edges. The task is to find the length of the longest directed path in Graph.
+Note: Length of a directed path is the number of edges in it.
+
+Simple Approach:
+
+A naive approach is to calculate the length of the longest path from every node using DFS.
+
+* The time complexity of this approach is O(N2).
+
+Efficient Approach:
+
+An efficient approach is to use Dynamic Programming and DFS together to find the longest path in the Graph.
+Let dp[i] be the length of the longest path starting from the node i. Initially all positions of dp will be 0.
+We can call the DFS function from every node and traverse for all its children. The recursive formula will be:
+
+* dp[node] = max(dp[node], 1 + max(dp[child1], dp[child2], dp[child3]..))
+
+At the end check for the maximum value in dp[] array, which will be the longest path in the DAG.
+
+* Time Complexity: O(N+M), where N is the number of vertices and M is the number of edges in the graph.
+* Space Complexity: O(N), since an extra visited array of size N is required.
+
+
+
+
+
